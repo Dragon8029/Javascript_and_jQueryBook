@@ -23,7 +23,7 @@ function recorderControls(e) {
         e.returnValue = false; // IE fallback: stop default action
     }
 
-    switch(target.getAttribute("data-state")) { // Get the data-state attribute
+    switch(target.getAttribute('data-state')) { // Get the data-state attribute
         case "record": //If its value is record
             record(target); // Call the record() function
             break; // Exit the function to where called
@@ -35,7 +35,7 @@ function recorderControls(e) {
 }
 
 function record(target) {
-    target.setAttibute('data-state', "stop"); // Set data-state attr to stop
+    target.setAttribute('data-state', "stop"); // Set data-state attr to stop
     target.textContent  = "stop"; // Set text to 'stop'
 }
 
@@ -57,3 +57,4 @@ if (document.addEventListener) { // If event listener supported
     // If keyup event fires on noteInput, call writeLabel()
     noteInput.attachEvent('onkeyup', writeLabel);
 }
+
